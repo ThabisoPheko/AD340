@@ -7,12 +7,43 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello AD 340"
+        android:text="Enter your zipcode"
+        android:textSize="@dimen/title_text_height"
+        app:layout_constraintBottom_toTopOf="@+id/etZipcode"
+        app:layout_constraintEnd_toEndOf="@+id/etZipcode"
+        app:layout_constraintStart_toStartOf="@+id/etZipcode" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/zipcode_entry_icon"
+        android:layout_height="@dimen/zipcode_entry_icon"
+        android:src="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/etZipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter zipcode"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/btnSubmit_zipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Zipcode"
+        app:layout_constraintEnd_toEndOf="@+id/etZipcode"
+        app:layout_constraintStart_toStartOf="@+id/etZipcode"
+        app:layout_constraintTop_toBottomOf="@+id/etZipcode" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
